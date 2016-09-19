@@ -33,7 +33,8 @@
 	}
 </style>
 <script>
-	import store from "../../node_modules/storejs/dist/store.js"
+	// import store from "../../node_modules/storejs/dist/store.js"
+	import store from "../data/store.js"
 	export default{
 		data(){
 			return {
@@ -47,7 +48,10 @@
 			tijiao (){
 				this.allmsg.push(this.message);
 				this.message="";
-				store.set("allmsg",this.allmsg);
+				// store.set("allmsg",this.allmsg);
+				// adddata(state,this.allmsg)
+				store.dispatch('ADDDATA',this.allmsg)
+				console.log(store.state.data)
 			}
 		},
 		ready(){

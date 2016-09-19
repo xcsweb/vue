@@ -7,11 +7,12 @@
 	}
 </style>
 <script>
-	import store from "../../node_modules/storejs/dist/store.min.js"
+	import store from "../data/store.js"
+	// import store from "../../node_modules/storejs/dist/store.min.js"
 	export default {
 			data(){
 				return {
-					allmsg1:store.get("allmsg")
+					allmsg1:store.state.data
 					}
 				}
 			}
